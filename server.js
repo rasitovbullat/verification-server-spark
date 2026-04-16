@@ -92,7 +92,7 @@ app.post('/api/verification/request', requestCodeLimiter, async (req, res) => {
         `;
 
         const { data, error } = await resend.emails.send({
-            from: 'Spark App noreply@spark-messenger.ru',
+            from: 'noreply@spark-messenger.ru',
             to: [email],
             subject: `${code} — Код подтверждения Spark`,
             html: htmlContent,
